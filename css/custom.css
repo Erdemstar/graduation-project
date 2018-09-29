@@ -1,0 +1,17 @@
+/* Normal, standard links. */
+a:link       (bu kısım linklerin tıklanmamış görünmü ve rengi)
+{
+	color: black;
+
+text-decoration: none;  (yandaki kodu nerde kullanırsan linklerin altı çizgili olmaz)
+}
+a:visited   (bu kısım linklerin tıklanmış görünmü ve rengi)
+{
+	color: black;
+	text-decoration: none;
+}
+a:hover (bu kısımda linklerin üzerine geldiğinde görünümü ve rengi)
+{
+	color: black;
+
+}
