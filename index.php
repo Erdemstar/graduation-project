@@ -8,11 +8,36 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Deneme</title>
+    <title>Graduation Project</title>
 </head>
 <body>
+<?php
+        $viewer = getenv( "HTTP_USER_AGENT" );
+        $browser = "An unidentified browser!";
+        $platform = "An unidentified OS!";
 
+        if (  preg_match( "/MSIE/i", "$viewer" ) )
+        {
+            $browser = "Internet Explorer";
+        }
+        else if (  preg_match( "/Netscape/i", "$viewer" ) )
+        {
+            $browser = "Netscape";
+        }
+        else if (  preg_match( "/Mozilla/i", "$viewer" ) )
+        {
+            $browser = "Mozilla";
+        }
 
+        if (  preg_match( "/Windows/i", "$viewer" ) )
+        {
+            $platform = "Windows";
+        }
+        else if (  preg_match( "/Linux/i", "$viewer" ) )
+        {
+            $platform = "Linux";
+        }
+    ?>
      <!-- Giriş 1 -->
     <div class="container" style="margin-top: 5%">
 
@@ -23,24 +48,25 @@
               arayan kişilere üzerinde uygulama yapabilecekleri bir ortam sağlamaktadır
           </p>
           <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <p>Your browser is <?=$browser?> and your OS is <?=$platform?></p>
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         </div>
 
     </div>
 
 
-     <!-- Saldırı kısmı 1.satır -->
+     <!-- Saldırı kısmı 1 -->
     <div class="container" style="margin-top: 5%">
         <div class="card-deck mb-3 text-center">
 
+            <!-- Saldırı kısmı 1.1 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">Cross Site Scripting</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="CSS/level0.php" style="color: black">Cross Site Scripting</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
+                        <li><h5><a href="CSS/level1.php">Seviye 1</a></h5></li>
                         <li><h5><a href="#">Seviye 2</a></h5></li>
                         <li><h5><a href="#">Seviye 3</a></h5></li>
                         <li><h5><a href="#">Seviye 4</a></h5></li>
@@ -52,7 +78,7 @@
                     </ul>
                   </div>
             </div>
-
+            <!-- Saldırı kısmı 1.2 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">SQL Injection</a></h4>
@@ -67,7 +93,7 @@
                     </ul>
                   </div>
             </div>
-
+            <!-- Saldırı kısmı 1.3 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Upload</a></h4>
@@ -82,8 +108,8 @@
                     </ul>
                   </div>
             </div>
-
-             <div class="card mb-3 shadow-sm">
+            <!-- Saldırı kısmı 1.4 -->
+            <div class="card mb-3 shadow-sm">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Include</a></h4>
                 </div>
@@ -103,7 +129,7 @@
         </div>
     </div>
 
-     <!-- Saldırı kısmı 1.satır -->
+     <!-- Saldırı kısmı 12 -->
     <div class="container" style="margin-top: 5%">
         <div class="card-deck mb-3 text-center">
 
