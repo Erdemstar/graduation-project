@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="../css/custom.css">
-
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <title>Cross Site Scripting seviye 1</title>
 </head>
@@ -22,22 +20,51 @@
     ?>
     <div class="container" style="margin-top: 5%">
 
+        <!-- Satır -->
+        <div class="row">
 
-        <form ction="<?php $_PHP_SELF ?>" method="GET">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
-            <input type="name" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter email">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <!-- 1.parca -->
+            <div class="col-md-3"></div>
+
+            <!-- 2.parca -->
+            <div class="col-md-6">
+
+                <form ction="<?php $_PHP_SELF ?>" method="GET">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="name" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <button type="submit" class="btn" style="margin-left:30%;">Gönder</button>
+                     <a href="../index.php" class="btn btn-success" role="button">Gerigel</a>
 
 
-        <div style="margin-top:3%;">
-            <h3>Welcome <?=$tmp?></h3>
-        </div>
+                </form>
 
 
+                <div style="margin-top:3%;">
+                    <?php
+                        if ($tmp)
+                        {
+                            print("<span style='font-weight:bolder;font-size:25px'>Hoşgeldin </span>$tmp");
+                        }
+                    ?>
+
+                </div>
+
+
+
+            </div>
+
+            <!-- 3.parca -->
+            <div class="col-md-3"></div>
+
+         </div>
     </div>
+
+
+
+
 
 
     <!-- Optional JavaScript -->

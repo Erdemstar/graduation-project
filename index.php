@@ -13,7 +13,7 @@
 <body>
 <?php
         $viewer = getenv( "HTTP_USER_AGENT" );
-        $browser = "An unidentified browser!";
+        $browser = "An unidentified browser";
         $platform = "An unidentified OS!";
 
         if (  preg_match( "/MSIE/i", "$viewer" ) )
@@ -48,7 +48,7 @@
               arayan kişilere üzerinde uygulama yapabilecekleri bir ortam sağlamaktadır
           </p>
           <hr class="my-4">
-          <p>Your browser is <?=$browser?> and your OS is <?=$platform?></p>
+          <p>Kullandığın tarayıcı <?=$browser?> , kullandığın işletim sistemi ise <?=$platform?></p>
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         </div>
 
