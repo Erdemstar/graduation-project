@@ -6,20 +6,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Cross Site Scripting seviye 1</title>
+    <title>Cross Site Scripting seviye 2</title>
 </head>
 <body>
 <?php error_reporting(E_ERROR | E_WARNING | E_PARSE);?>
-
-
     <?php
-
-
         if($_GET["name"])
         {
             $tmp = $_GET["name"];
-        }
 
+        }
 
     ?>
     <div class="container" style="margin-top: 5%">
@@ -35,7 +31,7 @@
 
                 <form ction="<?php $_PHP_SELF ?>" method="GET">
 
-                    <div class="form-group">
+                   <div class="form-group">
                         <label for="exampleInputEmail1" style="font-weight:bolder">Name</label>
                         <input type="name" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Please enter yourname">
                     </div>
@@ -48,11 +44,19 @@
 
                 <div style="margin-top:3%;">
                     <?php
-                        if ($tmp)
+                        if (strpos($tmp,'script'))
+                        {
+                            $gcc = explode("<script>" , $tmp );
+                            //;
+                            foreach ($gcc as $deger)
+                             {
+                                echo $deger;
+                             }
+                        }
+                        else
                         {
                             print("<span style='font-weight:bolder;font-size:25px'>Hoşgeldin </span>$tmp");
                         }
-
                     ?>
 
                 </div>
