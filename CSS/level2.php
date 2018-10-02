@@ -44,10 +44,15 @@
 
                 <div style="margin-top:3%;">
                     <?php
+
+                    /*
+                        Burada küçük harf'le script yazmadıktan sonra her türlü çalışır
+                    */
+
+
                         if (strpos($tmp,'script'))
                         {
-                            $gcc = explode("<script>" , $tmp );
-                            //;
+                            $gcc = explode("<script>" , $tmp ); //metin <script> kelimesi ile parçala :)
                             foreach ($gcc as $deger)
                              {
                                 echo $deger;
