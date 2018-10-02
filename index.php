@@ -69,7 +69,7 @@
                         <li><h5><a href="CSS/level1.php">Seviye 1</a></h5></li>
                         <li><h5><a href="CSS/level2.php">Seviye 2</a></h5></li>
                         <li><h5><a href="CSS/level3.php">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
+                        <li><h5><a href="CSS/level4.php">Seviye 4</a></h5></li>
                         <li><h5><a href="#">Seviye 5</a></h5></li>
                         <li><h5><a href="#">Seviye 6</a></h5></li>
                         <li><h5><a href="#">Seviye 7</a></h5></li>

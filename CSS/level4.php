@@ -6,7 +6,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Cross Site Scripting seviye 3</title>
+    <title>Cross Site Scripting seviye 4</title>
 </head>
 <body>
 <?php error_reporting(E_ERROR | E_WARNING | E_PARSE);?>
@@ -47,24 +47,12 @@
 
 
                      /*
-                      Burada hepsini küçük veya büyük yapmadığında çalışır.
+                      Burada script gördüğü kelimeyi'i --> '' yapacaktır.
                     */
 
-                        $gcc1 = gettype(strpos($tmp,"script"));
-                        $gcc2 = gettype(strpos($tmp,"SCRIPT"));
-
-                        if ($gcc1 === 'integer' OR $gcc2 === 'integer')
-                        {
-                            print("<span style='font-weight:bolder;font-size:25px'>Hoşgeldin </span>");
-                        }
-                        else
-                        {
-                            if ($tmp)
-                            {
-                                print("<span style='font-weight:bolder;font-size:25px'>Hoşgeldin </span>$tmp");
-                            }
-
-                        }
+                        $gcc = str_replace("<script>" ,"" , $tmp );
+                        $gcc2 = str_replace("</script>" ,"" , $gcc );
+                        print("<span style='font-weight:bolder;font-size:25px'>Hoşgeldin </span>$gcc2");
 
 
                     ?>
