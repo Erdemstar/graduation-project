@@ -96,11 +96,11 @@
             <!-- Saldırı kısmı 1.3 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Upload</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="FU/level0.php" style="color: black">File Upload</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
+                        <li><h5><a href="FU/level1.php">Seviye 1</a></h5></li>
                         <li><h5><a href="#">Seviye 2</a></h5></li>
                         <li><h5><a href="#">Seviye 3</a></h5></li>
                         <li><h5><a href="#">Seviye 4</a></h5></li>
