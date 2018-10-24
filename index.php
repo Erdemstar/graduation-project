@@ -102,24 +102,18 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <li><h5><a href="FU/level1.php">Seviye 1</a></h5></li>
                         <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
                     </ul>
                   </div>
             </div>
             <!-- Saldırı kısmı 1.4 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Include</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="FI/level0.php" style="color: black">File Include</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
+                        <li><h5><a href="FI/level1.php?name=File/text">Seviye 1</a></h5></li>
+                        <li><h5><a href="FI/level2.php?name=File/text">Seviye 2</a></h5></li>
                     </ul>
                   </div>
             </div>
@@ -129,13 +123,14 @@
         </div>
     </div>
 
-     <!-- Saldırı kısmı 12 -->
+     <!-- Saldırı kısmı 2 -->
     <div class="container" style="margin-top: 5%">
         <div class="card-deck mb-3 text-center">
 
+            <!-- Saldırı kısmı 2.1 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">Cross Site Scripting</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">Code Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
@@ -152,9 +147,10 @@
                   </div>
             </div>
 
+            <!-- Saldırı kısmı 2.2 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">SQL Injection</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">Command Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
@@ -167,9 +163,10 @@
                   </div>
             </div>
 
+            <!-- Saldırı kısmı 2.3 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Upload</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">LDAP Attack</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
@@ -182,9 +179,11 @@
                   </div>
             </div>
 
+
+            <!-- Saldırı kısmı 2.4 -->
              <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">File Include</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">XML Attack</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
