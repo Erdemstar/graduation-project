@@ -1,46 +1,20 @@
+<?php
+  include ("Backend/Library/General_Function.php");
+  $general = new General;
+  $general->getErr();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-
-    <link rel="stylesheet" href="css/custom.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Frontend/css/custom.css">
+    <link rel="stylesheet" href="Frontend/css/bootstrap.min.css">
     <title>Graduation Project</title>
 </head>
 <body>
-<?php
-        $viewer = getenv( "HTTP_USER_AGENT" );
-        $browser = "An unidentified browser";
-        $platform = "An unidentified OS!";
-
-        if (  preg_match( "/MSIE/i", "$viewer" ) )
-        {
-            $browser = "Internet Explorer";
-        }
-        else if (  preg_match( "/Netscape/i", "$viewer" ) )
-        {
-            $browser = "Netscape";
-        }
-        else if (  preg_match( "/Mozilla/i", "$viewer" ) )
-        {
-            $browser = "Mozilla";
-        }
-
-        if (  preg_match( "/Windows/i", "$viewer" ) )
-        {
-            $platform = "Windows";
-        }
-        else if (  preg_match( "/Linux/i", "$viewer" ) )
-        {
-            $platform = "Linux";
-        }
-    ?>
      <!-- Giriş 1 -->
     <div class="container" style="margin-top: 5%">
-
         <div class="jumbotron">
           <h1 class="display-4">Hoşgeldiniz</h1>
           <p class="lead">
@@ -48,12 +22,10 @@
               arayan kişilere üzerinde uygulama yapabilecekleri bir ortam sağlamaktadır
           </p>
           <hr class="my-4">
-          <p>Kullandığın tarayıcı <?=$browser?> , kullandığın işletim sistemi ise <?=$platform?></p>
+          <p>Kullandığın tarayıcı <?=$general->getBrowser($_SERVER['HTTP_USER_AGENT']); ?> , kullandığın işletim sistemi ise <?=$general->getOS($_SERVER['HTTP_USER_AGENT']); ?></p>
           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
         </div>
-
     </div>
-
 
      <!-- Saldırı kısmı 1 -->
     <div class="container" style="margin-top: 5%">
@@ -62,63 +34,64 @@
             <!-- Saldırı kısmı 1.1 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="CSS/level0.php" style="color: black">Cross Site Scripting</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/XSS/level0.php" style="color: black">Cross Site Scripting</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="CSS/level1.php">Seviye 1</a></h5></li>
-                        <li><h5><a href="CSS/level2.php">Seviye 2</a></h5></li>
-                        <li><h5><a href="CSS/level3.php">Seviye 3</a></h5></li>
-                        <li><h5><a href="CSS/level4.php">Seviye 4</a></h5></li>
-                        <li><h5><a href="CSS/level5.php">Seviye 5</a></h5></li>
-                        <li><h5><a href="CSS/level6.php">Seviye 6</a></h5></li>
-                        <li><h5><a href="CSS/level7.php">Seviye 7</a></h5></li>
-                        <li><h5><a href="#">Seviye 8</a></h5></li>
-                        <li><h5><a href="#">Seviye 9</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level1.php">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level2.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level3.php">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level4.php">Seviye 4</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level5.php">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level6.php">Seviye 6</a></h5></li>
+                        <li><h5><a href="Frontend/XSS/level7.php">Seviye 7</a></h5></li>
                     </ul>
                   </div>
             </div>
             <!-- Saldırı kısmı 1.2 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">SQL Injection</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/SQL_Injection/level0.php" style="color: black">SQL Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/SQL_Injection/level1.php?name=James">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/SQL_Injection/level2.php?name=James">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/SQL_Injection/level3.php?name=James">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/SQL_Injection/level4.php?id=1">Seviye 4</a></h5></li>
+                        <li><h5><a href="Frontend/SQL_Injection/level5.php?id=1">Seviye 5</a></h5></li>
                     </ul>
                   </div>
             </div>
             <!-- Saldırı kısmı 1.3 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="FU/level0.php" style="color: black">File Upload</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/File_Upload/level0.php" style="color: black">File Upload</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="FU/level1.php">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/File_Upload/level1.php">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/File_Upload/level2.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/File_Upload/level3.php">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/File_Upload/level4.php">Seviye 4</a></h5></li>
+
                     </ul>
                   </div>
             </div>
             <!-- Saldırı kısmı 1.4 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="FI/level0.php" style="color: black">File Include</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/File_Include/level0.php" style="color: black">File Include</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="FI/level1.php?name=File/text">Seviye 1</a></h5></li>
-                        <li><h5><a href="FI/level2.php?name=File/text">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/File_Include/level1.php?page=include/html/statistics.html">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/File_Include/level2.php?page=text.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/File_Include/level3.php?page=include/html/statistics.html">Seviye 3</a></h5></li>
+
                     </ul>
                   </div>
             </div>
-
-
 
         </div>
     </div>
@@ -130,15 +103,15 @@
             <!-- Saldırı kısmı 2.1 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="CodeI/level0.php" style="color: black">Code Injection</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/Code_Injection/level0.php" style="color: black">Code Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="CodeI/level1.php">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level1.php">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level2.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level3.php">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level4.php">Seviye 4</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level5.php">Seviye 5</a></h5></li>
                         <li><h5><a href="#">Seviye 6</a></h5></li>
                         <li><h5><a href="#">Seviye 7</a></h5></li>
                         <li><h5><a href="#">Seviye 8</a></h5></li>
@@ -150,15 +123,15 @@
             <!-- Saldırı kısmı 2.2 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="CI/level0.php" style="color: black">Command Injection</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/Command_Injection/level0.php" style="color: black">Command Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="CI/level1.php">Seviye 1</a></h5></li>
-                        <li><h5><a href="CI/level2.php">Seviye 2</a></h5></li>
-                        <li><h5><a href="CI/level3.php">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/Command_Injection/level1.php">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/Command_Injection/level2.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/Command_Injection/level3.php">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/Command_Injection/level4.php">Seviye 4</a></h5></li>
+
                     </ul>
                   </div>
             </div>
@@ -166,35 +139,77 @@
             <!-- Saldırı kısmı 2.3 -->
             <div class="card mb-3 shadow-sm">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">LDAP Attack</a></h4>
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/HTML_Injection/level0.php" style="color: black">HTML Injection</a></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level1.php">Seviye 1</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level2.php">Seviye 2</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level3.php">Seviye 3</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level4.php">Seviye 4</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level5.php">Seviye 5</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level6.php">Seviye 6</a></h5></li>
+                        <li><h5><a href="Frontend/HTML_Injection/level7.php">Seviye 7</a></h5></li>
                     </ul>
                   </div>
             </div>
 
+        
+
+
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 5%">
+        <div class="card-deck mb-3 text-center">
+
+            <!-- Saldırı kısmı 2.1 -->
+            <div class="card mb-3" style="display:none"></div>
+
+            <!-- Saldırı kısmı 2.2 -->
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/Code_Injection/level0.php" style="color: black">Code Injection</a></h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li><h5><a href="Frontend/Code_Injection/level5.php">Insecure Direct Object Reference(XVWA)</a></h5></li>
+                      <li><h5><a href="Frontend/Code_Injection/level3.php">Server Side Template Injection(XVWA)</a></h5></li>
+                      <li><h5><a href="Frontend/Code_Injection/level2.php">Cross Site Request Forget..</a></h5></li>
+                      <li><h5><a href="Frontend/Code_Injection/level4.php">XEE</a></h5></li>
+                      <li><h5><a href="Frontend/Code_Injection/level4.php">XPATH Injection(XVWA)</a></h5></li>
+                        <li><h5><a href="Frontend/Different_Type/Http_Get_Login.php">HTTP Login (GET)</a></h5></li>
+                        <li><h5><a href="Frontend/Different_Type/Http_POST_Login.php">HTTP Login (POST)</a></h5></li>
+                        <li><h5><a href="#">Seviye 6</a></h5></li>
+                        <li><h5><a href="#">Seviye 7</a></h5></li>
+                        <li><h5><a href="#">Seviye 8</a></h5></li>
+                        <li><h5><a href="#">Seviye 9</a></h5></li>
+                    </ul>
+                  </div>
+            </div>
+
+            <!-- Saldırı kısmı 2.3 -->
+            <div class="card mb-3 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal"><a href="Frontend/Code_Injection/level0.php" style="color: black">Code Injection</a></h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li><h5><a href="Frontend/Code_Injection/level1.php">Unvalidated Redirect & Forwards(XVWA)</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level4.php">Server-Side Includes (SSI) Injection</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level2.php">JavaScript Validation Bypass(OWASP)</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level3.php">Directory Travelsal</a></h5></li>
+                        <li><h5><a href="Frontend/Code_Injection/level5.php">Seviye 5</a></h5></li>
+                        <li><h5><a href="#">Seviye 6</a></h5></li>
+                        <li><h5><a href="#">Seviye 7</a></h5></li>
+                        <li><h5><a href="#">Seviye 8</a></h5></li>
+                        <li><h5><a href="#">Seviye 9</a></h5></li>
+                    </ul>
+                  </div>
+            </div>
 
             <!-- Saldırı kısmı 2.4 -->
-             <div class="card mb-3 shadow-sm">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal"><a href="#" style="color: black">XML Attack</a></h4>
-                </div>
-                <div class="card-body">
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="#">Seviye 1</a></h5></li>
-                        <li><h5><a href="#">Seviye 2</a></h5></li>
-                        <li><h5><a href="#">Seviye 3</a></h5></li>
-                        <li><h5><a href="#">Seviye 4</a></h5></li>
-                        <li><h5><a href="#">Seviye 5</a></h5></li>
-                    </ul>
-                  </div>
-            </div>
+             <div class="card mb-3 shadow-sm" style="display:none"></div>
 
 
 
@@ -203,14 +218,9 @@
 
 
 
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="Frontend/js/bootstrap.min.js"></script>
 
 </body>
 </html>
