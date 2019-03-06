@@ -1,6 +1,6 @@
 <?php
   include "../../../Backend/Library/DifferentType_Function.php";
-  $http = new HTTP();
+  $idor = new IDOR();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/custom.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <title>HTTP GET Login</title>
+    <title>IDOR Home</title>
 </head>
 <body>
 
@@ -28,21 +28,14 @@
             <!-- 2.parca -->
             <div class="col-md-6">
 
-              <form class="form-signin" action="<?php $_PHP_SELF ?>" method="get">
-                 <h2 class="form-signin-heading">Giriş Yap</h2>
-                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
-                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-                 <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş</button>
-               </form>
-
 
                <?php
 
-                 if (isset($_GET["username"]) || isset($_GET["password"]) ){
-
-                  echo "<span style='font-weight:bolder;font-size:20px'>". $http->HTTP_GET_Login($_GET["username"],$_GET["password"]) ."</span>";
-
-                 }
+                    if (isset($_POST["id"])){
+                      echo $idor->Get_Data($_POST["id"]);
+                      //$data = explode(" ",$data);
+                      echo "<h1>Burada idor çalışıyor fakat tasarım olarak daha bitmedi.Buraya kullanıcı profile yapılacaktır.DB üzerine kullanıcı bilgileri vardır ve kullanıcı fotoğrafı için yol kaydedildi.</h1>";
+                    }
 
                 ?>
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user ID="1">
+    <id>1</id>
+    <username>james13</username>
+    <password>123123</password>
+    <firstname>James</firstname>
+    <lastname>Harden</lastname>
+    <age>30</age>
+    <country>USA</country>
+  </user>
+
+  <user ID="2">
+    <id>2</id>
+    <username>lebrown23</username>
+    <password>111222</password>
+    <firstname>LeBrown</firstname>
+    <lastname>James</lastname>
+    <age>32</age>
+    <country>USA</country>
+  </user>
+
+  <user ID="3">
+    <id>3</id>
+    <username>cedy3</username>
+    <password>111333</password>
+    <firstname>Cedi</firstname>
+    <lastname>Osman</lastname>
+    <age>25</age>
+    <country>Turkey</country>
+  </user>
+</users>

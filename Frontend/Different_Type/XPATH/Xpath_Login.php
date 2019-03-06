@@ -1,6 +1,7 @@
 <?php
   include "../../../Backend/Library/DifferentType_Function.php";
-  $http = new HTTP();
+  $xpath = new XPATH();
+
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../../css/custom.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <title>HTTP GET Login</title>
+    <title>XPATH Injection</title>
 </head>
 <body>
 
@@ -28,19 +29,24 @@
             <!-- 2.parca -->
             <div class="col-md-6">
 
-              <form class="form-signin" action="<?php $_PHP_SELF ?>" method="get">
+              <form class="form-signin" action="<?php $_PHP_SELF ?>" method="post">
                  <h2 class="form-signin-heading">Giriş Yap</h2>
                  <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
                  <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                  <button class="btn btn-lg btn-primary btn-block" type="submit">Giriş</button>
                </form>
+               <h1>Tasarım dahada güzelleştirilecek.</h1>
 
 
                <?php
 
-                 if (isset($_GET["username"]) || isset($_GET["password"]) ){
-
-                  echo "<span style='font-weight:bolder;font-size:20px'>". $http->HTTP_GET_Login($_GET["username"],$_GET["password"]) ."</span>";
+                 if (isset($_POST["username"]) || isset($_POST["password"]) ){
+                  $data = $xpath->Login($_POST["username"],$_POST["password"]);
+                  foreach ($data as $key => $value) {
+                    echo "<h3>Hoşgeldiniz ";
+                    echo (string)$data[$key]->firstname ." ". (string)$data[$key]->lastname;
+                    echo "</h3>";
+                  }
 
                  }
 

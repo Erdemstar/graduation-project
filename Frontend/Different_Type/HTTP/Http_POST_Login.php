@@ -1,6 +1,6 @@
 <?php
   include "../../../Backend/Library/DifferentType_Function.php";
-  $differ = new HTTP();
+  $http = new HTTP();
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
 
                  if (isset($_POST["username"]) || isset($_POST["password"]) ){
 
-                  echo "<span style='font-weight:bolder;font-size:20px'>". $differ->HTTP_POST_Login($_POST["username"],$_POST["password"]) ."</span>";
+                  echo "<span style='font-weight:bolder;font-size:20px'>". $http->HTTP_POST_Login($_POST["username"],$_POST["password"]) ."</span>";
 
                  }
 

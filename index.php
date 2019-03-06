@@ -179,7 +179,7 @@
                       <li><h5><a href="Frontend/Code_Injection/level3.php">Server Side Template Injection(XVWA)</a></h5></li>
                       <li><h5><a href="Frontend/Code_Injection/level2.php">Cross Site Request Forgery</a></h5></li>
                       <li><h5><a href="Frontend/Code_Injection/level4.php">XEE</a></h5></li>
-                      <li><h5><a href="Frontend/Code_Injection/level4.php">XPATH Injection(XVWA)</a></h5></li>
+                      <li><h5><a href="Frontend/Different_Type/XPATH/Xpath_Login.php">XPATH Injection</a></h5></li>
                         <li><h5><a href="#">Seviye 6</a></h5></li>
                         <li><h5><a href="#">Seviye 7</a></h5></li>
                         <li><h5><a href="#">Seviye 8</a></h5></li>

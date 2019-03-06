@@ -98,5 +98,24 @@
 
   }
 
-  
+  class XPATH{
+    function Login($username,$password){
+      $xml = simplexml_load_file("./users.xml");
+      $users =  $xml->xpath("/users/user[username='$username' and password='$password']");
+      if (empty($users)){
+        die("Geçersiz bir kullanıcı adı veya parola girdiniz.");
+      }
+      else{
+        return $users;
+      }
+    }
+
+    /*
+      Bu türde kullanıcıdan username ve password bilgisi alıyorum daha sonra Login fonksiyonuna
+      parametre olarak atıp burada aynı path'de bulunan users.xml ile kıyaslıyorum.Eğer böyle
+      bir username ve password var ise login ekranına Hoşgeldiniz .. .. diyorum.Burada
+      deneme' or '1'='1 şeklinde bir payload girilerek tüm kullanıcıları dökebiliyor.Tasarım
+      kısmı hala yarıda kaldı fakat işlev olarak bir sıkıntı yok.
+    */
+  }
 ?>
