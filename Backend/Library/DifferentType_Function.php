@@ -143,16 +143,68 @@
   }
 
   class Redirect{
-    
+
     function __construct(){
       include ("General_Function.php");
       $general = new General();
       $general->startSes();
       $general->isnotLogined();
     }
-
     function forward($path){
       header('Location:'. $path);
     }
+
+    /*
+      Redirect.php ekranına 3 farklı a href'lerle yapılmış link var.Bu link'ler Redirect.php
+      sayfası içerinde $_GET["path"]'e istek yapılacka şekilde ayarlanmıştır.Burada GET'den alınan data
+      forward ile hedefe yönlendiriliypr.Burada hacker bu get'in path'den sonraki kısmını yakalayıp kullanıcıyı
+      güvenilir yerden güvensiz bir sayfaya yönlendirir.
+    */
+  }
+
+  class CSRF{
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+    function changePass($id,$pass1,$pass2) {
+      if (!empty($pass1) && !empty($pass2) )
+      {
+        if ($pass1 == $pass2){
+          $this->updatePass($id,$pass1);
+        }
+        else{
+          echo "Girilen şifreler uyuşmuyor";
+        }
+      }
+    }
+    function updatePass($id,$pword){
+      $servername = "localhost";
+      $username = "root";
+      $password = "root";
+      $dbname = "users";
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+      $sql = "update user_login set password='$pword'  where id='$id'";
+      $result = $conn->query($sql);
+      if (!$result){
+        printf($conn->error);
+      }
+      $conn->close();
+
+    }
+    /*
+      Burada basitçe kullaınıcıdan var olan user'ın şifresini değiştirmesi için şifre doğrulaması için 2 defe girilmesi
+      isteniyor.Burada bu kontroller changePass ile yapılırken daha sonra updatePass ile sql sorgusu yapılarak şifrede
+      değişiklik yapılıyor.Burada kullanıcı bir yanden bu site üzerindeki session'ı açık olurken diğer sekmede ise benim
+      yaptığım forma gidip buton'a bastığında bu sayfaya bir post istediği yapıp var olan kullanıcının password'u değişmiş
+      oluyor.
+    */
   }
 ?>

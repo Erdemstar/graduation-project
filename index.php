@@ -180,7 +180,7 @@
                       <li><h5><a href="Frontend/Different_Type/HTTP/Http_Get_Login.php">HTTP Login (GET)</a></h5></li>
                       <li><h5><a href="Frontend/Different_Type/HTTP/Http_POST_Login.php">HTTP Login (POST)</a></h5></li>
                       <li><h5><a href="Frontend/Code_Injection/level3.php">Server Side Template Injection(XVWA)</a></h5></li>
-                      <li><h5><a href="Frontend/Code_Injection/level2.php">Cross Site Request Forgery</a></h5></li>
+                      <li><h5><a href="Frontend/Different_Type/CSRF/CSRF_ChangePassword.php">Cross Site Request Forgery</a></h5></li>
                       <li><h5><a href="Frontend/Code_Injection/level4.php">XEE</a></h5></li>
                       <li><h5><a href="Frontend/Different_Type/XPATH/Xpath_Login.php">XPATH Injection</a></h5></li>
                         <li><h5><a href="#">Seviye 6</a></h5></li>
