@@ -118,4 +118,10 @@
       kısmı hala yarıda kaldı fakat işlev olarak bir sıkıntı yok.
     */
   }
+
+  class Redirect{
+    function forward($path){
+      header('Location:'. $path);
+    }
+  }
 ?>

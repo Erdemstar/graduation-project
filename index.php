@@ -195,7 +195,7 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li><h5><a href="Frontend/Code_Injection/level1.php">Unvalidated Redirect & Forwards(XVWA)</a></h5></li>
+                        <li><h5><a href="Frontend/Different_Type/Redirect/Redirect.php">Unvalidated Redirect & Forwards(XVWA)</a></h5></li>
                         <li><h5><a href="Frontend/Code_Injection/level4.php">Server-Side Includes (SSI) Injection</a></h5></li>
                         <li><h5><a href="Frontend/Code_Injection/level2.php">JavaScript Validation Bypass(OWASP)</a></h5></li>
                         <li><h5><a href="Frontend/Code_Injection/level3.php">Directory Travelsal</a></h5></li>
