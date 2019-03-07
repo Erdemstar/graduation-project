@@ -1,9 +1,6 @@
 <?php
   include "../../Backend/Library/SQLInj_Function.php";
-  include "../../Backend/Library/General_Function.php";
   $sqlinj  = new SQLInj();
-  $general = new General();
-  //$general->getErr();
 ?>
 <!DOCTYPE html>
 <html lang="en">

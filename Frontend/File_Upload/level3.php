@@ -1,8 +1,5 @@
 <?php
   include "../../Backend/Library/File_Upload_Function.php";
-  include "../../Backend/Library/General_Function.php";
-  $general = new General();
-  $general->getErr();
   $file_up = new FileUpload();
 ?>
 <!DOCTYPE html>

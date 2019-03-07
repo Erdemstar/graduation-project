@@ -2,6 +2,13 @@
 
   class HTMLInj{
 
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function hideScript($data){
       $data = str_ireplace("script","",$data);
       $data = str_ireplace("alert","",$data);

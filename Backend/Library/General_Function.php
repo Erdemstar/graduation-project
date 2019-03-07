@@ -67,6 +67,64 @@ class General{
     error_reporting(E_ALL);
   }
 
+  function startSes(){
+    session_start();
+  }
+  function destSes(){
+    session_start();
+    $_SESSION = array();
+    session_destroy();
+      header('Location: /graduation-project/login.php');
+  }
+
+  function Login($uname,$pword){
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "users";
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "select * from user_login where username='$uname' and password='$pword'";
+    $result = $conn->query($sql);
+    if (!$result){
+      printf($conn->error);
+    }
+
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        $this->giveSesData($row["id"] .",". $row["username"]);
+      }
+    }
+    else{
+      die("Kullanıcı adı veya parolası yanlıştır.");
+    }
+    $conn->close();
+
+  }
+  function giveSesData($data){
+    $data = explode(",",$data);
+    $_SESSION["id"] = $data[0];
+    $_SESSION["name"] = $data[1];
+    header('Location: index.php');
+
+  }
+  function isnotLogined(){
+    if (isset($_SESSION["id"]) && isset($_SESSION["name"])){
+
+    }
+    else{
+      header('Location: /graduation-project/login.php');
+    }
+  }
+  function isLogined(){
+    if (isset($_SESSION["id"]) && isset($_SESSION["name"])){
+      header('Location: index.php');
+    }
+  }
 }
 
 

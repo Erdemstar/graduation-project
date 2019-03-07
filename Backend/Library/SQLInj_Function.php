@@ -2,6 +2,13 @@
 
   class SQLInj{
 
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function dbConnect($query){
       $servername = "localhost";
       $username = "root";

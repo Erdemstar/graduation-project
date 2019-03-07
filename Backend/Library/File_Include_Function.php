@@ -2,6 +2,13 @@
 
   class File{
 
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function level1($page){
       include "../".$page;
     }

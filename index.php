@@ -1,7 +1,8 @@
 <?php
   include ("Backend/Library/General_Function.php");
   $general = new General;
-  $general->getErr();
+  $general->startSes();
+  $general->isnotLogined();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +14,12 @@
     <title>Graduation Project</title>
 </head>
 <body>
+
+    <?php include "header.php" ?>
      <!-- Giriş 1 -->
     <div class="container" style="margin-top: 5%">
         <div class="jumbotron">
-          <h1 class="display-4">Hoşgeldiniz</h1>
+          <h1 class="display-4">Hoşgeldiniz <?=ucfirst($_SESSION["name"])?></h1>
           <p class="lead">
               Bu uygulama Web Uygulaması geliştiren kişilere yazılımsal hataların nelere sebeb olacağını göstermek ve aynı zamanda Web açıkları
               arayan kişilere üzerinde uygulama yapabilecekleri bir ortam sağlamaktadır

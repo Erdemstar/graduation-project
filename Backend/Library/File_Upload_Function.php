@@ -2,6 +2,13 @@
 
   class FileUpload{
 
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function level1(){
       $target_dir = "../../Frontend/include/uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);

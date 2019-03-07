@@ -1,6 +1,14 @@
 <?php
 
   class HTTP{
+
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function HTTP_GET_Login($username ,$password){
       if ($username == "root" && $password == "toor"){
           return "Hoşgeldiniz $username";
@@ -31,6 +39,13 @@
   }
 
   class IDOR{
+
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
 
     function Login($uname , $pword){
       $servername = "localhost";
@@ -99,6 +114,14 @@
   }
 
   class XPATH{
+
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function Login($username,$password){
       $xml = simplexml_load_file("./users.xml");
       $users =  $xml->xpath("/users/user[username='$username' and password='$password']");
@@ -120,6 +143,14 @@
   }
 
   class Redirect{
+    
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
     function forward($path){
       header('Location:'. $path);
     }
