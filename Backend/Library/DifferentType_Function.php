@@ -207,4 +207,25 @@
       oluyor.
     */
   }
+
+  class JS_Bypass{
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
+    function Take($fname , $lname){
+      return "Hoşgeldiniz ". $fname ." ". $lname;
+    }
+
+    /*
+      Burada kullaınıcıdan ad soyad bilgisi alıp hiç bir kontrol etmeden geri döndürüyorum.fakat
+      client side olarak javascript kodları çalıştırıp kullanıcıdan sadece harf girmesini bekliyorum.
+      Bunu saldırıy aşmak için proxy kullanılıyor.
+    */
+
+  }
+
 ?>
