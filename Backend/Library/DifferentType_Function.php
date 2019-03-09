@@ -228,4 +228,18 @@
 
   }
 
+  class DT{
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+
+    function readFile($file){
+       $page = file_get_contents($file);
+       return $page;
+    }
+  }
+
 ?>
