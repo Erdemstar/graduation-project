@@ -242,4 +242,13 @@
     }
   }
 
+  class XXE{
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+    
+  }
 ?>
