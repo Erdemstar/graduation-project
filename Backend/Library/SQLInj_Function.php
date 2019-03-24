@@ -1,5 +1,6 @@
 <?php
 
+  include "DB.php";
   class SQLInj{
 
     function __construct(){
@@ -10,12 +11,7 @@
     }
 
     function dbConnect($query){
-      $servername = "localhost";
-      $username = "root";
-      $password = "root";
-      $dbname = "users";
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
+      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'],$GLOBALS['dbname'] );
       // Check connection
       if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
@@ -59,7 +55,7 @@
 
     function level3($name){
       if (preg_match('/\s+/', $name)) {
-         die("ERROR NO SPACE");
+         echo "ERROR NO SPACE";
       }
       else{
         $sql = "SELECT * FROM user where firstname='$name'";
@@ -70,7 +66,7 @@
 
     function level4($id){
       if (!preg_match('/^[0-9]+/', $id)) {
-        die("ERROR INTEGER REQUIRED");
+        echo "ERROR INTEGER REQUIRED";
       }
       else{
         $sql = "SELECT * FROM user where id=$id";
@@ -81,7 +77,7 @@
 
     function level5($id){
       if (!preg_match('/[0-9]+$/', $id)) {
-        die("ERROR INTEGER REQUIRED");
+        echo "ERROR INTEGER REQUIRED";
       }
       else{
         $sql = "SELECT * FROM user where id=$id";

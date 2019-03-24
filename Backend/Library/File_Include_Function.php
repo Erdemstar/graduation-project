@@ -10,11 +10,11 @@
     }
 
     function level1($page){
-      include "../".$page;
+      include $page;
     }
 
     function level2($page){
-      include "../include/php/" . $page;
+      include "include/php/" . $page;
     }
 
     function level3($page){

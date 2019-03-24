@@ -10,7 +10,7 @@
     }
 
     function level1(){
-      $target_dir = "../../Frontend/include/uploads/";
+      $target_dir = "./include/uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       // Check if image file is a actual image or fake image
@@ -27,7 +27,7 @@
     }
 
     function level2(){
-      $target_dir = "../../Frontend/include/uploads/";
+      $target_dir = "./include/uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       $valid_mime_types = array("image/gif","image/png","image/jpeg","image/pjpeg",);
@@ -46,13 +46,13 @@
          }
       }
       else {
-       echo "Dosya upload edildiği sırada bir hata oluştu.";
+       echo "Dosya upload edil/../Frontend/diği sırada bir hata oluştu.";
        }
 
     }
 
     function level3(){
-      $target_dir = "../../Frontend/include/uploads/";
+      $target_dir = "./include/uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       $valid_mime_types = array("image/gif","image/png","image/jpg","image/jpeg","image/pjpeg",);
@@ -84,7 +84,7 @@
     }
 
     function level4(){
-      $target_dir = "../../Frontend/include/uploads/";
+      $target_dir = "./include/uploads/";
       $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
       $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
       $valid_mime_types = array("image/gif","image/png","image/jpg","image/jpeg","image/pjpeg",);
@@ -92,11 +92,8 @@
       // Check if image file is a actual image or fake image
       $status = "0";
       if (in_array($_FILES['fileToUpload']['type'], $valid_mime_types)){
-        foreach ($valid_image_name as $key => $value) {
-          $get_loc = strpos($imageFileType,$value);
-          if ($get_loc > 0){
+        if (in_array($imageFileType , $valid_image_name)){
             $status = "1";
-          }
         }
       }
       if(isset($_POST["submit"]) && $status == "1" ) {

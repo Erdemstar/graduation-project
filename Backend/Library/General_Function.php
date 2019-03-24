@@ -71,10 +71,10 @@ class General{
     session_start();
   }
   function destSes(){
-    session_start();
+    $this->startSes();
     $_SESSION = array();
     session_destroy();
-      header('Location: /graduation-project/login.php');
+    //header('Location: /tems/login.php');
   }
 
   function Login($uname,$pword){
@@ -100,7 +100,7 @@ class General{
       }
     }
     else{
-      die("Kullanıcı adı veya parolası yanlıştır.");
+      echo "Kullanıcı adı veya parolası yanlıştır.";
     }
     $conn->close();
 
@@ -117,7 +117,7 @@ class General{
 
     }
     else{
-      header('Location: /graduation-project/login.php');
+      header('Location: /tems/login.php');
     }
   }
   function isLogined(){

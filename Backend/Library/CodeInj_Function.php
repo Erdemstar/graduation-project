@@ -52,7 +52,7 @@
       $loc1 = strpos(" ".$data,"system");
       $loc2 = strpos(" ".$data,"exec");
       $loc3 = strpos(" ".$data,"shell_exec");
-      $loc4 = strpos(" ".$data,"shell_exec");
+      $loc4 = strpos(" ".$data,"passthru");
 
       if ($loc1 == 1 || $loc2 == 1 || $loc3 == 1 || $loc4 == 1){
         echo  "Lütfen geçerli bir isim giriniz";
