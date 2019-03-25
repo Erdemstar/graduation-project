@@ -19,7 +19,6 @@
   <!-- App css -->
   <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
   <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body class="auth-fluid-pages pb-0">
@@ -32,7 +31,7 @@
 
           <!-- Logo -->
           <div class="auth-brand text-center text-lg-left">
-            <a href="index.html">
+            <a href="index.php">
               <span><img src="assets/images/logo-light.png" alt="" height="18"></span>
             </a>
           </div>
@@ -48,7 +47,6 @@
               <input class="form-control" type="text" id="username" name="username" required="" placeholder="Enter your username">
             </div>
             <div class="form-group">
-              <a href="pages-recoverpw-2.html" class="text-muted float-right"><small>Forgot your password?</small></a>
               <label for="password">Password</label>
               <input class="form-control" type="password" required="" id="password" name="password" placeholder="Enter your password">
             </div>
@@ -60,10 +58,10 @@
               <p class="text-muted font-16">Sign in with</p>
               <ul class="social-list list-inline mt-3">
                 <li class="list-inline-item">
-                  <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/erdemyildiz/" class="social-list-item border-info text-info"><i class="mdi mdi-linkedin"></i></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github-circle"></i></a>
+                  <a href="https://github.com/ErdemStar" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github-circle"></i></a>
                 </li>
               </ul>
             </div>
@@ -83,14 +81,14 @@
     <!-- end auth-fluid-form-box-->
 
     <!-- Auth fluid right content -->
-    <div class="auth-fluid-right text-center">
+    <?php
+
+      $tmp = rand(1,3);
+      $path = "./assets/images/motivation/".$tmp.".jpg";
+    ?>
+    <div class="auth-fluid-right text-center" style="background:url('<?=$path?>') center; background-repeat: repeat;background-size: cover;">
       <div class="auth-user-testimonial">
-        <h2 class="mb-3">I love the color!</h2>
-        <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
-        </p>
-        <p>
-          - Hyper Admin User
-        </p>
+
       </div> <!-- end auth-user-testimonial-->
     </div>
     <!-- end Auth fluid right content -->

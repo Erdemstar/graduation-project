@@ -117,7 +117,7 @@ class General{
 
     }
     else{
-      header('Location: /tems/login.php');
+      header('Location: login.php');
     }
   }
   function isLogined(){
