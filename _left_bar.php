@@ -235,6 +235,9 @@
                             <a href="DIF_SXSS.php">Stored XSS</a>
                         </li>
                         <li>
+                            <a href="DIF_DBXSS.php">DOM Based XSS</a>
+                        </li>
+                        <li>
                             <a href="DIF_CSRF.php">Cross Side Request Forgery</a>
                         </li>
                         <li>
