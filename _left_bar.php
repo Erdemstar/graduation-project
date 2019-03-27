@@ -26,8 +26,8 @@
 
             <div class="leftbar-user">
                 <a href="#">
-                    <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                    <span class="leftbar-user-name"><?=$_SESSION["name"]?> asdasd</span>
+                    <img src="<?=$_SESSION["pic"]?>" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                    <span class="leftbar-user-name">Welcome <?=ucfirst($_SESSION["name"])?></span>
                 </a>
             </div>
 

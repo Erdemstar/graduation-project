@@ -109,6 +109,7 @@ class General{
     $data = explode(",",$data);
     $_SESSION["id"] = $data[0];
     $_SESSION["name"] = $data[1];
+    $_SESSION["pic"] ="assets/images/users/avatar-".$_SESSION["id"].".jpg";
     header('Location: index.php');
 
   }

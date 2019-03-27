@@ -27,19 +27,14 @@
                 <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
                     aria-expanded="false">
                     <span class="account-user-avatar">
-                        <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                        <img src="<?=$_SESSION["pic"]?>"  alt="user-image" class="rounded-circle">
                     </span>
                     <span>
-                        <span class="account-user-name"><?=$_SESSION["name"]?> asads</span>
+                        <span class="account-user-name">Welcome <?=ucfirst($_SESSION["name"])?></span>
                         <span class="account-position">Founder</span>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
-                    <!-- item-->
-                    <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome !</h6>
-                    </div>
-
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="mdi mdi-account-circle mr-1"></i>
