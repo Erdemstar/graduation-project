@@ -37,7 +37,7 @@
             </form>
             <?php
               if (isset($_POST["code"])) {
-                echo $cominj->level4($_POST["code"]);
+                echo $cominj->level1($_POST["code"]);
               }
             ?>
           </div> <!-- end content-->

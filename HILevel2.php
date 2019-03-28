@@ -32,7 +32,7 @@
                 <label for="exampleInputEmail1" style="font-weight:bolder">Name</label>
                 <input type="name" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Please enter yourname">
               </div>
-            <button type="button" class="btn btn-block btn-primary">Gönder</button>
+            <button type="submit" class="btn btn-block btn-primary">Gönder</button>
             </form>
             <?php
               if (isset($_GET["name"])) {
