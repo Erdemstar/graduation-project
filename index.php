@@ -48,11 +48,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Cross-site_Scripting">OWASP</a></li>
+                          <li><a href="https://www.netsparker.com/blog/web-security/cross-site-scripting-xss/">Netsparker</a></li>
+                          <li><a href="https://www.veracode.com/security/xss">Veracode</a></li>
                         </ul>
                       </div>
                     </div>
@@ -75,11 +73,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/SQL_Injection">OWASP</a></li>
+                          <li><a href="https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/">Netsparker</a></li>
+                          <li><a href="https://www.veracode.com/security/sql-injection">Veracode</a></li>
                         </ul>
                       </div>
                     </div>
@@ -102,11 +98,7 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Testing_for_HTML_Injection">OWASP</a></li>
                         </ul>
                       </div>
                     </div>
@@ -118,8 +110,8 @@
                         <h3 class="mt-0">File Upload</h3>
                         <p class="text-muted mb-2">
                           File upload web uygulaması üzerinden sunucuya zararlı yazılım yükleyerek gerçekleştirilen saldırılara verilen isimdir.
-                          Saldırgan yanlış yapılandırılmış web sitesi üzerine hazırladığı betiği yükleyerek uzak sunucuyu ele geçirebilir.File upload zafiyeti basit bir zafiyettir. Açığın doğurabileceği sonuçları ve istismarının kolaylığını göz önünde
-                          bulundurunca hiç de hafife alınacak bir açık olmadığı ortaya çıkacaktır.
+                          Saldırgan yanlış yapılandırılmış web sitesi üzerine hazırladığı betiği yükleyerek uzak sunucuyu ele geçirebilir.File upload zafiyeti basit bir zafiyettir.
+                          Açığın doğurabileceği sonuçları ve istismarının kolaylığını göz önünde bulundurunca hiç de hafife alınacak bir açık olmadığı ortaya çıkacaktır.
                         </p>
                         <p class="text-muted mb-4">
                           Web uygulamasının kuytu bir köşesinde gözden
@@ -129,11 +121,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Unrestricted_File_Upload">OWASP</a></li>
+                          <li><a href=">https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/unrestricted-file-upload/"</a>Netsparker</li>
+                          <li><a href="https://infosecaddicts.com/exploit-file-upload-vulnerability/">Diğer</a></li>
                         </ul>
                       </div>
                     </div>
@@ -155,11 +145,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion">OWASP</a></li>
+                          <li><a href="https://null-byte.wonderhowto.com/how-to/exploit-php-file-inclusion-web-apps-0179955/">Null-Byte</a></li>
+                          <li><a href="https://www.sunnyhoi.com/how-to-hack-a-website-using-local-file-inclusion-lfi/">Diğer</a></li>
                         </ul>
                       </div>
                     </div>
@@ -183,11 +171,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Command_Injection">OWASP</a></li>
+                          <li><a href="https://www.netsparker.com/blog/web-security/command-injection-vulnerability/">Null-Byte</a></li>
+                          <li><a href="https://portswigger.net/web-security/os-command-injection">Portswigger</a></li>
                         </ul>
                       </div>
                     </div>
@@ -205,11 +191,8 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Code_Injection">OWASP</a></li>
+                          <li><a href="https://www.acunetix.com/blog/articles/code-injection/">Acunetix</a></li>
                         </ul>
                       </div>
                     </div>
@@ -237,11 +220,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery">OWASP</a></li>
+                          <li><a href="https://null-byte.wonderhowto.com/how-to/manipulate-user-credentials-with-csrf-attack-0186461/">Null-Byte</a></li>
+                          <li><a href="https://www.veracode.com/security/csrf">Veracode</a></li>
                         </ul>
                       </div>
                     </div>
@@ -265,11 +246,10 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Server_Side_Request_Forgery">OWASP</a></li>
+                          <li><a href="https://www.hackerone.com/blog-How-To-Server-Side-Request-Forgery-SSRF">Hackerone</a></li>
+                          <li><a href="https://canyoupwn.me/tr-ssrf-server-side-request-forgery-zafiyeti/">Canyoupwn</a></li>
+
                         </ul>
                       </div>
                     </div>
@@ -287,11 +267,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Path_Traversal">OWASP</a></li>
+                          <li><a href="https://www.acunetix.com/websitesecurity/directory-traversal/">Acunetix</a></li>
+                          <li><a href="https://null-byte.wonderhowto.com/how-to/perform-directory-traversal-extract-sensitive-information-0185558/">Null-Byte</a></li>
                         </ul>
                       </div>
                     </div>
@@ -311,11 +289,9 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/Testing_for_Insecure_Direct_Object_References">OWASP</a></li>
+                          <li><a href="https://www.bugcrowd.com/how-to-find-idor-insecure-direct-object-reference-vulnerabilities-for-large-bounty-rewards/">Bugcrowd</a></li>
+                          <li><a href="https://www.bugbountynotes.com/training/tutorial?id=2">Bugbountynotes</a></li>
                         </ul>
                       </div>
                     </div>
@@ -339,11 +315,8 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/XPATH_Injection">OWASP</a></li>
+                          <li><a href="https://www.acunetix.com/vulnerabilities/web/xpath-injection-vulnerability/">Acunetix</a></li>
                         </ul>
                       </div>
                     </div>
@@ -367,11 +340,8 @@
                         </p>
                         <h5>Faydalı Linkler</h5>
                         <ul>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
-                          <li><a href="">asdasd</a></li>
+                          <li><a href="https://www.owasp.org/index.php/XML_External_Entity">OWASP</a></li>
+                          <li><a href="https://www.bgasecurity.com/2014/02/xxe-xml-external-entity-guvenlik/">BGA</a></li>
                         </ul>
                       </div>
                     </div>
