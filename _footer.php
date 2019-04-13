@@ -1,7 +1,7 @@
-<footer class="footer" style="margin-top:20%;bottom:none;">
+<footer class="footer" style="margin-top:2%;bottom:none;">
     <div class="row">
         <div class="col-md-6">
-            2018 - 2019 © Hyper - Coderthemes.com
+            2018 - 2019
         </div>
         <div class="col-md-6">
             <div class="text-md-right footer-links d-none d-md-block">

@@ -285,6 +285,39 @@
     */
   }
 
+  class SSTI{
+    function __construct(){
+      include ("General_Function.php");
+      $general = new General();
+      $general->startSes();
+      $general->isnotLogined();
+    }
+    function getName($name){
+      $tmp = __DIR__;
+      $tmp = explode("/Library",$tmp);
+      include $tmp[0] . '/ssti/twig/twig/lib/Twig/Autoloader.php';
+      Twig_Autoloader::register();
+      try {
+              $loader = new Twig_Loader_String();
+              $twig = new Twig_Environment($loader);
+              $result= $twig->render($name);
+              return "Hello $result";
+
+      }
+      catch (Exception $e) {
+            die ('ERROR: ' . $e->getMessage());
+          }
+      }
+    /*
+
+    Kullanıcıdan bir url alıp aldığım url'in içeriğini alıyorum.Daha sonra bu içeriği yeni bir jpg uzantılı bir dosyaya
+    ekliyorum.Daha sonra ekranda indirilen fotoğrafı gösteriyorum.Saldırı gereği burada kullanıcı "file:///etc/passwd" tarzı
+    birşey girerse bunu okuyup daha sonra aynı şekilde random bir isimle .jpg uzantılı dosya ile ekranda göstermeye çalışıyor.
+    İçeriği görüntülemek için cat ile okumak gerekiyor.
+
+    */
+  }
+
   class JS_Bypass{
     function __construct(){
       include ("General_Function.php");

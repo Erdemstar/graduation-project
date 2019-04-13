@@ -1,5 +1,4 @@
 <?php
-
   $loc1 = stripos($_SERVER['SCRIPT_NAME'],"sql");
   $loc2 = stripos($_SERVER['SCRIPT_NAME'],"fi");
   $loc3 = stripos($_SERVER['SCRIPT_NAME'],"dif");
@@ -242,6 +241,9 @@
                         </li>
                         <li>
                             <a href="DIF_SSRF.php">Server Side Request Forgery</a>
+                        </li>
+                        <li>
+                            <a href="DIF_SSTI.php">Server Side Template Injection</a>
                         </li>
                         <li>
                             <a href="DIF_DT.php?page=include/html/statistics.html">Directory Travelsal</a>

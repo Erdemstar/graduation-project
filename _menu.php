@@ -12,14 +12,18 @@
         </a>
 
         <ul class="list-unstyled topbar-right-menu float-right mb-0">
+
             <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
-                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English</span> <i class="mdi mdi-chevron-down"></i>
+                <a  class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" id="topbar-languagedrop" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img  class="mr-1" height="12"> <span class="align-middle">Select Language</span> <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu" aria-labelledby="topbar-languagedrop">
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <a href="index.php?language=TR" class="dropdown-item notify-item">
                         <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Türkçe</span>
+                    </a>
+                    <a href="index.php?language=EN" class="dropdown-item notify-item">
+                        <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English</span>
                     </a>
                 </div>
             </li>

@@ -77,6 +77,22 @@ class General{
     //header('Location: /tems/login.php');
   }
 
+  function setCookie($lang){
+    setcookie("lang",$lang);
+    /*
+    dil değiştirildikten sonra ekrana basıldığına eskisi gösteriliyordu.Sayfa yenilendiğinde
+    güncel hali olduğunu gözlemledim.Bu yüzden aşağıya bir header fonksiyonu ile sayfayı
+    bir kere yeniledim.  
+    */
+    header("location: index.php");
+  }
+
+  function cookieControl(){
+    if (isset($_GET["language"]) ){
+      $this->setCookie($_GET["language"]);
+    }
+  }
+
   function Login($uname,$pword){
     $servername = "localhost";
     $username = "root";
@@ -110,6 +126,7 @@ class General{
     $_SESSION["id"] = $data[0];
     $_SESSION["name"] = $data[1];
     $_SESSION["pic"] ="assets/images/users/avatar-".$_SESSION["id"].".jpg";
+    $this->setCookie("TR");
     header('Location: index.php');
 
   }
@@ -126,6 +143,8 @@ class General{
       header('Location: index.php');
     }
   }
+
+
 }
 
 
