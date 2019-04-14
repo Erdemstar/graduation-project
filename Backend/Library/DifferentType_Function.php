@@ -119,51 +119,35 @@
       $general->startSes();
       $general->isnotLogined();
     }
-    function getUsername($id){
+    function chanePassword($id , $pword){
       $servername = "localhost";
       $username = "root";
       $password = "root";
       $dbname = "users";
       // Create connection
       $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'],$GLOBALS['dbname'] );
+
       // Check connection
       if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
       }
-      $sql = "select username from user_login where id='$id'";
+      $sql = "update user_login set password = '$pword' where id = '$id'";
       $result = $conn->query($sql);
       if (!$result){
         printf($conn->error);
       }
-      if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-          return $row["username"];
-        }
-      }
-    }
-    function updatePass($id,$pword){
-      $servername = "localhost";
-      $username = "root";
-      $password = "root";
-      $dbname = "users";
-      // Create connection
-      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], $GLOBALS['password'],$GLOBALS['dbname'] );
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-      $sql = "update user_login set password='$pword'  where id='$id'";
-      $result = $conn->query($sql);
-      if (!$result){
-        die("Şifre değişim sırasında bir hata oluştu.Lütfen sonra tekrar deneyiniz.");
+      else{
+        return "Password başarıyla değiştirildi.";
       }
       $conn->close();
-      $uname = $this->getUsername($id);
-      echo ucfirst($uname) ." şifreniz başarıyla değiştirildi.";
-
     }
+    /*
 
+      Burada kullanıcıdan id ve password değeri alıp tablo üzerinden update işlemi yapılıyor.Id değeri
+      session'dan alınıp form içersinde hidden olarak ekleniyor.Araya giren birisi id değerini değiştirip
+      bir başka kullanıcının password değerini değiştirebilir.
 
+    */
   }
 
   class XPATH{
