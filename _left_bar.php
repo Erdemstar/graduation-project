@@ -89,12 +89,14 @@
                         <li>
                             <a href="SQLILevel5.php?id=1">Seviye 5</a>
                         </li>
+                        <!-- 
                         <li>
-                            <a href="SQLILevel6.php">Seviye 6</a>
+                             <a href="SQLILevel6.php">Seviye 6</a>
                         </li>
                         <li>
                             <a href="SQLILevel7.php">Seviye 7</a>
                         </li>
+                        -->
                     </ul>
                 </li>
                 <!-- HTML Inj -->

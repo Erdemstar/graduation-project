@@ -95,8 +95,8 @@ class General{
 
   function Login($uname,$pword){
     $servername = "localhost";
-    $username = "root";
-    $password = "root";
+    $username = "pentest";
+    $password = "pentest";
     $dbname = "users";
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
