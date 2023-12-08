@@ -111,7 +111,7 @@
       *Kullanıcıdan aldığı "id" parametresinin son değeri int olup olmadığının kontrolünü regex ile yapar.
       Eğer int değilse "die" ile ekrana uyarı bastırır
 
-  ?>
+  */
 
 
 
