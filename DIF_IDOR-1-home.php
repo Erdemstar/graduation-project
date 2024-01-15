@@ -42,7 +42,7 @@
                   <div class="row">
                     <div class="col-sm-8">
                       <div class="media">
-                        <span class="float-left m-2 mr-4"><img src="include/<?=$data[7]?>" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
+                        <span class="float-left m-2 mr-4"><img src="include/pictures/<?=$data[6]?>" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
                         <div class="media-body">
 
                           <h4 class="mt-1 mb-1 text-white" style="margin-top:16% !important"><?php echo $data[0] ." ". $data[1]; ?></h4>

@@ -107,6 +107,6 @@ Level 3
 Level 4
 
     *Burada alınan data içersinde ";" , "|" veya "&" varsa ekrana bir uyarı döndüren yoksa shell_exec içersinde çalıştırırlır
-
+*/
 
 ?>
